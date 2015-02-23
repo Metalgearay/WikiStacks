@@ -7,9 +7,9 @@
   </div>
  <div class="col-md-9">
   <ul>
-  	<li>This</li>
-  	<li>Is</li>
-  	<li>Brett</li>
-  </ul>
+  {% for doc in docs %}
+    <li><a href='#'>{{doc}}</a></li>
+  {% endfor %}
+</ul>
   </div>
 {% endblock %}

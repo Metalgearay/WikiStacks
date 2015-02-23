@@ -25,7 +25,7 @@ router.post('/submit',function(req,res)
  
   };
 
-  var p = new models.Page({ "title": req.body.pagename, "body":req.body.pagecontent, "url_name": createURL(req.body.pagename)});
+  var p = new models.Page({ "title":req.body.pagename, "body":req.body.pagecontent, "url_name":createURL(req.body.pagename)});
   p.save();
   res.redirect('/');
 });

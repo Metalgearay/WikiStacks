@@ -6,12 +6,12 @@ var Page, User;
 var Schema = mongoose.Schema;
 
 var pageSchema = new Schema({
-  title: String,
-  url_name: String,
-  owner_id:   String,
-  body:   String,
-  date: { type: Date, default: Date.now },
-  status: Number
+  title:String,
+  url_name:String,
+  owner_id:String,
+  body:String,
+  date: { type:Date, default:Date.now },
+  status:Number
 });
 
 var userSchema = new Schema({

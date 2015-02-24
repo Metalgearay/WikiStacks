@@ -13,6 +13,10 @@ var pageSchema = new Schema({
   date: { type:Date, default:Date.now },
   status:Number
 });
+pageSchema.virtual('full_route').get(function() 
+{
+return this.url_name+"/wiki/"
+});
 
 var userSchema = new Schema({
   name:  {
@@ -25,9 +29,6 @@ var userSchema = new Schema({
 
 Page = mongoose.model('Page', pageSchema);
 User = mongoose.model('User', userSchema);
-pageSchema.virtual('full_route').get(function() 
-{
-return this.url_name+"/wiki/"
-});
+
 
 module.exports = {"Page": Page, "User": User};

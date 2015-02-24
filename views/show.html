@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}{{title}}{% endblock %}
+ {% block content %}
+ <div class="page-header">
+    <h1>{{docs[0].title}}</h1>
+  </div>
+ <div class="col-md-9">
+ <p>{{docs[0].body}}<p>
+  </div>
+{% endblock %}
